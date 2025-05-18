@@ -1,0 +1,59 @@
+/* Gradient navbar background */
+.navbar-custom {
+  background: linear-gradient(90deg, #ff6e7f, #bfe9ff);
+  padding: 12px 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo style */
+.brand-name {
+  font-size: 28px;
+  font-weight: 800;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+.brand-name span {
+  color: #ffeaa7;
+}
+
+/* Nav links */
+.custom-link {
+  color: #fff !important;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+.custom-link:hover {
+  color: #fefae0 !important;
+  text-decoration: underline;
+}
+
+/* Icons (favorite and cart) */
+
+.custom-icon:hover {
+  color: #ffeaa7 !important;
+  transform: scale(1.1);
+}
+
+/* Increase icon size and change color */
+.custom-icon {
+  font-size: 1-0px;          /* Bigger size */
+  color: red!important; /* Bright red/pink color */
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-weight: 500;
+
+}
+
+/* keep your existing styles … then add / adjust: */
+
+.navbar-custom .nav-link {
+  padding-bottom: 0 !important;   /* kill extra baseline pad */
+  display: flex;                  /* so icon + badge align */
+  align-items: center;
+  gap: 4px;
+}
+
+.navbar-custom .custom-icon svg {
+  font-size: 1.25rem;
+}

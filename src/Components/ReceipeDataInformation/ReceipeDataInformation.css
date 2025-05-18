@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap');
+
+.recipe-detail-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: 'Quicksand', sans-serif;
+  color: #333;
+}
+
+.recipe-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  padding: 24px;
+}
+
+.image-section {
+  flex: 1 1 350px;
+  max-width: 400px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+  cursor: zoom-in;
+}
+
+.recipe-image:hover {
+  transform: scale(1.05);
+}
+
+.info-section {
+  flex: 1 1 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.recipe-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #2c3e50;
+}
+
+.info-section p {
+  font-size: 1rem;
+  margin: 4px 0;
+  color: #555;
+}
+
+.section {
+  margin-top: 24px;
+}
+
+.section h3 {
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #2980b9;
+  border-bottom: 2px solid #2980b9;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.ingredients-list,
+.steps-list {
+  margin: 0;
+  padding-left: 20px;
+  color: #444;
+  line-height: 1.5;
+}
+
+.ingredients-list li {
+  margin-bottom: 6px;
+}
+
+.steps-list li {
+  margin-bottom: 12px;
+}
+
+.button-group {
+  margin-top: 30px;
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.fav-btn,
+.cart-btn {
+  flex: 1 1 140px;
+  padding: 14px 0;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+  color: white;
+}
+
+.fav-btn {
+  background-color: #e67e22;
+}
+
+.fav-btn:hover {
+  background-color: #cf711f;
+}
+
+.cart-btn {
+  background-color: #27ae60;
+}
+
+.cart-btn:hover {
+  background-color: #219150;
+}
+
+.back-btn {
+  margin-top: 30px;
+  display: inline-block;
+  color: #2980b9;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.05rem;
+  transition: color 0.3s ease;
+}
+
+.back-btn:hover {
+  color: #1f5f8b;
+}
+.button-group {
+  margin: 24px 0;   /* top & bottom space */
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+/* Responsive */
+
+@media (max-width: 850px) {
+  .recipe-card {
+    flex-direction: column;
+    padding: 16px;
+  }
+  .image-section,
+  .info-section {
+    max-width: 100%;
+    flex: unset;
+  }
+  .button-group {
+    flex-direction: column;
+  }
+  .fav-btn,
+  .cart-btn {
+    flex: unset;
+    width: 100%;
+  }
+}
+
