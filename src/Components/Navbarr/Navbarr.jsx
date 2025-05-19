@@ -35,7 +35,7 @@ const[cartItem,setCartItem]=useState([])
             <Link to="/receipes" className="nav-link custom-link">Recipes</Link>
             <Link to="/fav" className="nav-link custom-icon"><MdFavoriteBorder /> <Badge bg="secondary">{favItem.length}</Badge>
 </Link>
-            <Link to="/cart" className="nav-link custom-icon"><IoCartOutline /> <Badge bg="secondary">{cartItem.length}</Badge>
+            <Link to="/cart" className="nav-link custom-icon" ><IoCartOutline /> <Badge bg="secondary">{cartItem.length}</Badge>
 </Link>
           </Nav>
         </Navbar.Collapse>
