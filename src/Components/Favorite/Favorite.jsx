@@ -1,21 +1,40 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Favorite.css";       
 
 export default function Favorite() {
-  const favItemData = JSON.parse(localStorage.getItem("favItems")) ?? [];
+const[favReceipe,setFavReceipe]=useState([])
 
-  if (!favItemData.length) {
+useEffect(()=>{
+    const favItemData= JSON.parse(localStorage.getItem("favItems")) || [];
+    console.log(favItemData)
+    setFavReceipe(favItemData)
+},[])
+
+  if (!favReceipe.length) {
     return (
       <div className="alert">
-        😔 No favourites yet. Go add some tasty recipes!
+         No favourites yet. Go add some tasty recipes!
       </div>
     );
   }
 
+  //delete function
+  const deleteFav=(cardId)=>{
+    console.log(cardId);
+  
+    
+   const matchesData= favReceipe.filter((f)=>f.id!==cardId)
+   console.log(matchesData);
+   setFavReceipe(matchesData)
+   localStorage.setItem("favItems",JSON.stringify(matchesData))
+   
+    
+  }
+
   return (
     <section className="fav-grid">
-      {favItemData.map((matchedRecipe) => (
-        <div key={matchedRecipe.id} className="card">
+      {favReceipe.map((matchedRecipe , i) => (
+        <div key={i} className="card">
           <img
             src={matchedRecipe.image}
             alt={matchedRecipe.name}
@@ -38,7 +57,7 @@ export default function Favorite() {
               <strong>🏷 Tags:</strong> {matchedRecipe.tags.join(", ")}
             </p>
 
-            <button className="btn">Delete</button>
+            <button className="btn"  onClick={()=>deleteFav(matchedRecipe.id)}>Delete</button>
           </div>
         </div>
       ))}

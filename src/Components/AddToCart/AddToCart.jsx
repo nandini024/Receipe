@@ -27,7 +27,7 @@ function AddToCart() {
               onClick={() => {
                 const updated = cartItems.filter((i) => i.id !== item.id);
                 localStorage.setItem("cartItems", JSON.stringify(updated));
-                window.location.reload(); // quick-n-dirty re-render
+                window.location.reload(); 
               }}
             >
               Remove
