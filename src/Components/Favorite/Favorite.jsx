@@ -6,7 +6,7 @@ const[favReceipe,setFavReceipe]=useState([])
 
 useEffect(()=>{
     const favItemData= JSON.parse(localStorage.getItem("favItems")) || [];
-    console.log(favItemData)
+    console.log(favReceipe)
     setFavReceipe(favItemData)
 },[])
 
