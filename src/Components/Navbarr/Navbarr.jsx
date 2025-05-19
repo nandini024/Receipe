@@ -7,8 +7,6 @@ import Badge from 'react-bootstrap/Badge'
 import './Navbarr.css';
 
 
-
-
 const Navbarr = () => {
  
 const[favItem,setFavItem]=useState([])
@@ -37,6 +35,8 @@ const[cartItem,setCartItem]=useState([])
 </Link>
             <Link to="/cart" className="nav-link custom-icon" ><IoCartOutline /> <Badge bg="secondary">{cartItem.length}</Badge>
 </Link>
+
+
           </Nav>
         </Navbar.Collapse>
       </Container>
