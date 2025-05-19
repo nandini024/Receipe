@@ -1,5 +1,5 @@
 import React from "react";
-import "./favorite.css";        // ⬅️ styles just below
+import "./Favorite.css";       
 
 export default function Favorite() {
   const favItemData = JSON.parse(localStorage.getItem("favItems")) ?? [];
