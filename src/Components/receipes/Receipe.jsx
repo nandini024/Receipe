@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "./Receipe.css";
+import "./Receipe.css"; 
+
 
 export default function Receipe({ singleReceipe }) {
   const navigate = useNavigate();
